@@ -1,5 +1,5 @@
 const documentE = document.documentElement;
-const button = document.querySelector('button');
+const button = document.querySelector('.navbar__theme');
 
 button.addEventListener('click', (e) => {
   e.preventDefault();

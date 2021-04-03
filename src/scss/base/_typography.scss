@@ -1,2 +1,6 @@
 @use '../abstracts/colors' as *;
 
+body {
+  background-color: var(--h-clr-1);
+  color:var(--gray-9);
+}

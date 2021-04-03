@@ -1,0 +1,19 @@
+@use '../base/typography' as *;
+
+
+%btn {
+padding: .5em 1em;
+border-radius: 20px;
+outline: none;
+border: none;
+display: inline-block;
+font-size: .8em;
+}
+
+.btn {
+  @extend%btn;
+}
+.btn__primary {
+@extend%btn;
+background-color: var(--op-h-clr-1);
+}

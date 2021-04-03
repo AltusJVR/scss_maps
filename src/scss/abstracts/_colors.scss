@@ -105,7 +105,6 @@ $o-white-9: map-get($overlay-white-map, 9 ); */
 :root {
   @each $num, $val in $overlay-white-map {
     --o-white-#{$num}:#{$val};
-    
   }
 }
 
@@ -219,3 +218,15 @@ $s-overlay-map:(
   }
 }
 
+/* 6 Opposite Colors Cutsom Props */
+.blue-theme {
+  @each $clr, $val in $s-clr-map {
+    --op-#{$clr}: #{$val};
+  }
+}
+
+.purple-theme {
+  @each $clr, $val in $h-clr-map {
+    --op-#{$clr}: #{$val};
+  }
+}

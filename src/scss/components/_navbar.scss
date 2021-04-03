@@ -1,0 +1,11 @@
+@use '../base/typography' as *;
+@use '../components/buttons' as *;
+
+.navbar {
+  display: flex;
+  height: 10vh;
+  border-bottom: 2px solid var(--op-h-clr-2);
+  align-items: center;
+  justify-content: space-around;
+}
+

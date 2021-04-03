@@ -13,8 +13,11 @@
   "keywords": [],
   "author": "Altus Janse Van Rensburg <albertusbjvr@gmail.com>",
   "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.0.0-nightly.627"
+  },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-nightly.629",
+    "@parcel/transformer-sass": "^2.0.0-nightly.632",
     "sass": "1.32.8"
   }
 }

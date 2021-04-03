@@ -2,7 +2,7 @@
   "name": "scss_maps",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "rm -rf tmp && parcel serve './src/index.html' --no-cache --dist-dir tmp -p 8080",
     "deploy": "parcel build 'src/index.html' --no-cache --dist-dir dist --no-content-hash",

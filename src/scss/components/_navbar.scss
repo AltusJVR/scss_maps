@@ -1,6 +1,9 @@
 @use '../base/typography' as *;
 @use '../components/buttons' as *;
 
+
+
+
 .navbar {
   display: flex;
   height: 10vh;
@@ -11,7 +14,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 3;
   // background-color: $bg-clr;
 }
 
@@ -35,6 +38,16 @@
     font-family: $big-font;
     font-size: 1.5em;
     font-weight: 600;
+    transition: 
+    transform 200ms ease,
+    border-bottom 200ms ease;
+    border-bottom: 2px solid transparent;
+    &:hover, &:focus {
+      outline: none;
+      border-bottom: 2px solid var(--op-h-clr-5);
+      transform: scale(1.2);
+      transform-origin: center;
+    }
   }
 }
 
@@ -46,13 +59,17 @@
     height: 90vh;
     width: 100%;
     justify-content: space-evenly;
-    background-color: var(--op-h-clr-2);
+    background-color: var( --op-h-overlay-5);
     color: var(--h-clr-1);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 200ms ease-in;
-    z-index: 3;
+    z-index: -1;
     a {
+      
+      text-align: center;
+      
+      width: 100%;
       opacity: 0;
     }
   }
@@ -80,14 +97,14 @@
     position: relative;
     width: 100%;
     height: 3px;
-    background-color: $font-clr;
+    background-color:var(--op-h-clr-1);
     transition: background-color 200ms ease-in;
   }
 
   .line::before,
   .line::after {
     border-radius: 10px;
-    background-color: $font-clr;
+    background-color:var(--op-h-clr-1);
     content: '';
     position: absolute;
     left: 0;

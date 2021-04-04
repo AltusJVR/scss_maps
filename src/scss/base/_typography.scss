@@ -27,7 +27,7 @@ $available-font-maps:(
   12: fonts.$fira-sans-map,
 );
 /* Select the font theme from the above map 1 - 12 */
-$font-theme: 12;
+$font-theme: 4;
 
 /* Lora - good with yellow */
 /* Oswald good with yellow */
@@ -104,7 +104,7 @@ body {
   font-family: map-get($map: $use-map, $key: body);
   font-weight: checkMapFontWeight($use-map, body-weight);
   font-style: map-get($map: $use-map, $key: #{b-s} );
-  background-color: $bg-clr;
+  // background-color: $bg-clr;
   color: $font-clr;
   font-size: $body-font-size;
   line-height: $body-lh;

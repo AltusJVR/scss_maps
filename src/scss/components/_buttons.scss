@@ -7,7 +7,13 @@ border-radius: 20px;
 outline: none;
 border: none;
 display: inline-block;
-font-size: .8em;
+font-size: 1.2em;
+font-weight: 600;
+font-family: $big-font;
+text-transform: uppercase;
+position: relative;
+z-index: 1;
+cursor: pointer;
 }
 
 .btn {
@@ -15,5 +21,30 @@ font-size: .8em;
 }
 .btn__primary {
 @extend%btn;
-background-color: var(--op-h-clr-1);
+background-color: transparent;
+color: var(--op-h-clr-1);
+border: 2px solid $bg-clr;
 }
+
+/* .btn__primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: $bg-clr;
+  z-index: -2;
+}
+.btn__primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: $o-white;
+  z-index: -1;
+} */

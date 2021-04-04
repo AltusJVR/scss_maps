@@ -223,10 +223,16 @@ $s-overlay-map:(
   @each $clr, $val in $s-clr-map {
     --op-#{$clr}: #{$val};
   }
+  @each $clr, $val in $s-overlay-map {
+    --op-#{$clr}: #{$val};
+  }
 }
 
 .purple-theme {
   @each $clr, $val in $h-clr-map {
+    --op-#{$clr}: #{$val};
+  }
+  @each $clr, $val in $h-overlay-map {
     --op-#{$clr}: #{$val};
   }
 }

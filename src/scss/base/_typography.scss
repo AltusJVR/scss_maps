@@ -46,9 +46,9 @@ $normal-font:map-get($map: $use-map, $key: body );
 
 /* Set bg, highligh and font color from color map */
 $bg-clr: var(--h-clr-1);
-$font-clr: var(--gray-8);
-$h-font-clr: var(--gray-8);
-$nav-overlay-clr: var(--h-overlay-5);
+$font-clr: var(--op-h-clr-1);
+$h-font-clr: var(--op-h-clr-1);
+$nav-overlay-clr: var(--op-h-overlay-7);
 $o-white: var(--o-white-2);
 $o-black: var(--o-black-3);
 $body-font-size: 1.1em;

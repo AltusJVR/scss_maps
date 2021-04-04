@@ -18,11 +18,14 @@
   bottom: 0;
   left: 0;
   background-image: url(/src/img/wave-1.svg), url(/src/img/wave-2.svg),url(/src/img/wave-3.svg);
-  background-position: center;
-  background-size: cover;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-color: $bg-clr;
   background-blend-mode:hard-light;
   z-index: -1;
+  transform: scaleX(var(--scale));
+  transition: transform 100ms ease-in;
 }
 
 
@@ -39,12 +42,12 @@
 }
 
 .footer {
+  border-top: 2px solid var(--op-h-clr-1);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1em;
   height: 10vh;
-  
   position: relative;
   z-index: 1;
 }

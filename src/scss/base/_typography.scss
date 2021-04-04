@@ -128,3 +128,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.theme-1{
+--rotate:180deg;
+--scale: 1.1;
+}
+.theme-2{
+--rotate:0deg;
+--scale: 1.3;
+}

@@ -50,6 +50,7 @@
   height: 10vh;
   position: relative;
   z-index: 1;
+  font-family: $big-font;
 }
 
 
@@ -60,6 +61,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: $o-black;
+  background-color: $main-overlay;
   z-index: -1;
 }

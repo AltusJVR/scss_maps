@@ -108,9 +108,9 @@ $o-white-9: map-get($overlay-white-map, 9 ); */
   }
 }
 
-
+$adjust-h-clr: 180;
 /* 4 Highlight Color */
-$h-clr:hsl(170, 100%, 50%);
+$h-clr:hsl($adjust-h-clr, 100%, 50%);
 
 /* 4.1 Highlight Color adjust function for map */
 @function h-cr ($color, $adjust ){
@@ -131,7 +131,7 @@ h-clr-9: h-cr($h-clr,-45%),
 );
 
 /* 4.3 Highlight Color Cutom Props */
-.blue-theme {
+.theme-1 {
   @each $clr, $val in $h-clr-map {
     --#{$clr}: #{$val};
   }
@@ -156,15 +156,21 @@ $h-overlay-map:(
 );
 
 /* 4.6 Highlight Color Overlay Custom Properties */
-.blue-theme {
+.theme-1 {
   @each $clr, $val in $h-overlay-map {
     --#{$clr}: #{$val};
   }
 }
 
+$adjust: 180deg;
+@function getHue ($clr, $amount) {
+  @return color.hue($clr) - $amount
+};
+@debug getHue($h-clr,0);
 
+$adjust: 150deg;
 /* 5 Secondary Color */
-$s-clr:hsl(330, 100%, 50%);
+$s-clr:hsl(getHue($h-clr, $adjust), 100%, 50%);
 
 
 
@@ -187,7 +193,7 @@ h-clr-9: h-cr($s-clr,-45%),
 );
 
 /* 5.3 Secondary Color Cutom Props */
-.purple-theme {
+.theme-2 {
   @each $clr, $val in $s-clr-map {
     --#{$clr}: #{$val};
   }
@@ -212,14 +218,14 @@ $s-overlay-map:(
 );
 
 /* 5.6 Secondary Color Overlay Custom Properties */
-.purple-theme {
+.theme-2 {
   @each $clr, $val in $s-overlay-map {
     --#{$clr}: #{$val};
   }
 }
 
 /* 6 Opposite Colors Cutsom Props */
-.blue-theme {
+.theme-1 {
   @each $clr, $val in $s-clr-map {
     --op-#{$clr}: #{$val};
   }
@@ -228,7 +234,7 @@ $s-overlay-map:(
   }
 }
 
-.purple-theme {
+.theme-2 {
   @each $clr, $val in $h-clr-map {
     --op-#{$clr}: #{$val};
   }

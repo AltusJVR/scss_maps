@@ -8,7 +8,18 @@
   align-items: center;
   justify-content: space-around;
   position: relative;
-  background-color: $bg-clr;
+  // background-color: $bg-clr;
+}
+
+.navbar::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $o-black;
+  z-index: -1;
 }
 
 .navbar__links {

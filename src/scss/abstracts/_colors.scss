@@ -107,8 +107,10 @@ $o-white-9: map-get($overlay-white-map, 9 ); */
     --o-white-#{$num}:#{$val};
   }
 }
-
-$adjust-h-clr: 180;
+/* set main color HUe */
+$adjust-h-clr: 190;
+/* Adjust Secondary Color Hue */
+$adjust: 180deg;
 /* 4 Highlight Color */
 $h-clr:hsl($adjust-h-clr, 100%, 50%);
 
@@ -162,13 +164,13 @@ $h-overlay-map:(
   }
 }
 
-$adjust: 180deg;
+$adjust: 100deg;
 @function getHue ($clr, $amount) {
   @return color.hue($clr) - $amount
 };
 @debug getHue($h-clr,0);
 
-$adjust: 150deg;
+
 /* 5 Secondary Color */
 $s-clr:hsl(getHue($h-clr, $adjust), 100%, 50%);
 

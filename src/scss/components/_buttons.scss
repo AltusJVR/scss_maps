@@ -36,7 +36,7 @@ border: 2px solid $bg-clr;
   border-radius: 20px;
   background-color: $bg-clr;
   z-index: -2;
-}
+} */
 .btn__primary::after {
   content: '';
   position: absolute;
@@ -47,4 +47,4 @@ border: 2px solid $bg-clr;
   border-radius: 20px;
   background-color: $o-white;
   z-index: -1;
-} */
+}

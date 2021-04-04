@@ -1,5 +1,8 @@
 @use 'sass:color';
-
+/* set main color HUe */
+$adjust-h-clr: 195;
+/* Adjust Secondary Color Hue */
+$adjust: 160deg;
 /* 
 ==========
 1. Gray Map
@@ -107,10 +110,7 @@ $o-white-9: map-get($overlay-white-map, 9 ); */
     --o-white-#{$num}:#{$val};
   }
 }
-/* set main color HUe */
-$adjust-h-clr: 190;
-/* Adjust Secondary Color Hue */
-$adjust: 180deg;
+
 /* 4 Highlight Color */
 $h-clr:hsl($adjust-h-clr, 100%, 50%);
 
@@ -164,11 +164,11 @@ $h-overlay-map:(
   }
 }
 
-$adjust: 100deg;
+
 @function getHue ($clr, $amount) {
   @return color.hue($clr) - $amount
 };
-@debug getHue($h-clr,0);
+
 
 
 /* 5 Secondary Color */

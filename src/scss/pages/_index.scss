@@ -18,14 +18,15 @@
   bottom: 0;
   left: 0;
   background-image: url(/src/img/wave-1.svg), url(/src/img/wave-2.svg),url(/src/img/wave-3.svg);
-  background-position: bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: $bg-clr;
   background-blend-mode: var(--blend);
   z-index: -1;
-  transform: scaleX(var(--scale)) rotateX(var(--rotate));
-  transition: transform 200ms ease-in;
+  // transform: scaleX(var(--scale)) ;
+  transition: transform 500ms ease-in,
+  background-color 800ms ease-in;
+  transform-origin: center;
 }
 
 
@@ -74,4 +75,7 @@ body {
   position: relative;
   z-index: -50;
   background-color: var(--h-clr-1);
+  transition: 
+  background-color 100ms ease 50ms,
+  color 100ms ease 50ms;
 }

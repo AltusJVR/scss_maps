@@ -22,7 +22,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-color: $bg-clr;
-  background-blend-mode:hard-light;
+  background-blend-mode: var(--blend);
   z-index: -1;
   transform: scaleX(var(--scale)) rotateX(var(--rotate));
   transition: transform 200ms ease-in;

@@ -133,8 +133,10 @@ a {
 .theme-1{
 --rotate:180deg;
 --scale: 1.1;
+--blend: color-burn;
 }
 .theme-2{
 --rotate:0deg;
 --scale: 1.3;
+--blend: normal;
 }

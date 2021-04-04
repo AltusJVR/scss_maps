@@ -5,6 +5,7 @@ const navLinksA = document.querySelectorAll('.navbar__links a');
 const toggle = () => {
   burger.addEventListener('click', () => {
     navbarLink.classList.toggle('navbar__active')
+    burger.classList.toggle('toggle')
     navLinksA.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = '';

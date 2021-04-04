@@ -1,8 +1,8 @@
 @use 'sass:color';
-/* set main color HUe */
-$adjust-h-clr: 195;
-/* Adjust Secondary Color Hue */
-$adjust: 160deg;
+/* set main color Hue (0-360) */
+$adjust-h-clr: 190;
+/* Adjust Secondary Color Hue (0-360deg) */
+$adjust: 200deg;
 /* 
 ==========
 1. Gray Map

@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4aa06b5a-9d64-4961-b795-21cc51785031/deploy-status)](https://app.netlify.com/sites/nostalgic-einstein-acdfc2/deploys)
+
 # How to use: 
 `npm run start` - starts a dev server on locahost:8080.
 `npm run deploy` - used by server to build files. Not used on a dev machine. 

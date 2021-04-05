@@ -42,6 +42,19 @@ $gray-clr-map:(
 10:hsl(0, 0%, 5%),
 11:hsl(0, 0%, 0%),
 );
+$gray-clr-map-rev:(
+11: hsl(0, 0%, 100%),
+10: hsl(0, 0%, 90%),
+9: hsl(0, 0%, 80%),
+8: hsl(0, 0%, 70%),
+7: hsl(0, 0%, 60%),
+6: hsl(0, 0%, 50%),
+5: hsl(0, 0%, 40%),
+4: hsl(0, 0%, 30%),
+3: hsl(0, 0%, 20%),
+2:hsl(0, 0%, 5%),
+1:hsl(0, 0%, 0%),
+);
 
 /* 1.1 Gray custom props */
 :root {
@@ -243,4 +256,19 @@ $s-overlay-map:(
   @each $clr, $val in $h-overlay-map {
     --op-#{$clr}: #{$val};
   }
+}
+
+
+.dark-theme-1 {
+  @each $clr, $val in $gray-clr-map {
+    --dark-#{$clr}: #{$val};
+  }
+  --overlay: rgba(255,255,255,.2);
+}
+
+.dark-theme-2 {
+  @each $clr, $val in $gray-clr-map-rev {
+    --dark-#{$clr}: #{$val};
+  }
+  --overlay: rgba(0,0,0,.2);
 }

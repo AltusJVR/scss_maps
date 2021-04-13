@@ -68,9 +68,13 @@
     a {
       
       text-align: center;
-      
+      border: none;
       width: 100%;
       opacity: 0;
+      &:hover, 
+      &:focus {
+        border: none;
+      }
     }
   }
 

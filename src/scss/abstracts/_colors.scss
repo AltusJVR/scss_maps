@@ -1,0 +1,274 @@
+@use 'sass:color';
+/* set main color Hue (0-360) */
+$adjust-h-clr: 195;
+/* Adjust Secondary Color Hue (0-360deg) */
+$adjust: 200deg;
+/* 
+==========
+1. Gray Map
+1.1 Gray custom props
+==========
+2. Black Overlay Map
+2.1 Black Overlay Vars ====== Place Holder for vars
+2.1 Black Overlay Cutom props
+==========
+3.  White Overlay Map
+3.1 White Overlay Vars ====== Place Holder for vars
+3.1 White Overlay Custom props
+==========
+4 Highlight Color
+4.1 Highlight Color adjust function for map
+4.2 Highlight Color Map
+4.3 Highlight Color Cutom Props
+4.4 Highlight Color alpha adjustment for overlay
+.5 Highlight Color Overlay Map
+4.6 Highlight Color Overlay Custom Properties
+==========
+*/
+
+
+
+/* 1. Gray Map */
+$gray-clr-map:(
+1: hsl(0, 0%, 100%),
+2: hsl(0, 0%, 90%),
+3: hsl(0, 0%, 80%),
+4: hsl(0, 0%, 70%),
+5: hsl(0, 0%, 60%),
+6: hsl(0, 0%, 50%),
+7: hsl(0, 0%, 40%),
+8: hsl(0, 0%, 30%),
+9: hsl(0, 0%, 20%),
+10:hsl(0, 0%, 5%),
+11:hsl(0, 0%, 0%),
+);
+$gray-clr-map-rev:(
+11: hsl(0, 0%, 100%),
+10: hsl(0, 0%, 90%),
+9: hsl(0, 0%, 80%),
+8: hsl(0, 0%, 70%),
+7: hsl(0, 0%, 60%),
+6: hsl(0, 0%, 50%),
+5: hsl(0, 0%, 40%),
+4: hsl(0, 0%, 30%),
+3: hsl(0, 0%, 20%),
+2:hsl(0, 0%, 5%),
+1:hsl(0, 0%, 0%),
+);
+
+/* 1.1 Gray custom props */
+:root {
+  @each $num, $val in $gray-clr-map {
+    --gray-#{$num}:#{$val};
+  }
+}
+
+/* 2. Black Overlay Map */
+$overlay-black-map:(
+1:rgba(0,0,0,0.1),
+2:rgba(0,0,0,0.2),
+3:rgba(0,0,0,0.3),
+4:rgba(0,0,0,0.4),
+5:rgba(0,0,0,0.5),
+6:rgba(0,0,0,0.6),
+7:rgba(0,0,0,0.7),
+8:rgba(0,0,0,0.8),
+9:rgba(0,0,0,0.9),
+);
+/* 2.1 Black Overlay Vars ====== Place Holder for vars */
+/* $o-black-1: map-get($overlay-black-map, 1 );
+$o-black-2: map-get($overlay-black-map, 2 );
+$o-black-3: map-get($overlay-black-map, 3 );
+$o-black-4: map-get($overlay-black-map, 4 );
+$o-black-5: map-get($overlay-black-map, 5 );
+$o-black-6: map-get($overlay-black-map, 6 );
+$o-black-7: map-get($overlay-black-map, 7 );
+$o-black-8: map-get($overlay-black-map, 8 );
+$o-black-9: map-get($overlay-black-map, 9 ); */
+
+/* 2.1 Black Overlay Cutom props */
+:root {
+  @each $num, $val in $overlay-black-map {
+    --o-black-#{$num}:#{$val};
+  }
+}
+
+
+/* 3 White Overlay Map */
+$overlay-white-map:(
+1:rgba(255,255,255,0.1),
+2:rgba(255,255,255,0.2),
+3:rgba(255,255,255,0.3),
+4:rgba(255,255,255,0.4),
+5:rgba(255,255,255,0.5),
+6:rgba(255,255,255,0.6),
+7:rgba(255,255,255,0.7),
+8:rgba(255,255,255,0.8),
+9:rgba(255,255,255,0.9),
+);
+/* 3.1 White Overlay Vars ====== Place Holder for vars */
+/* $o-white-1: map-get($overlay-white-map, 1 );
+$o-white-2: map-get($overlay-white-map, 2 );
+$o-white-3: map-get($overlay-white-map, 3 );
+$o-white-4: map-get($overlay-white-map, 4 );
+$o-white-5: map-get($overlay-white-map, 5 );
+$o-white-6: map-get($overlay-white-map, 6 );
+$o-white-7: map-get($overlay-white-map, 7 );
+$o-white-8: map-get($overlay-white-map, 8 );
+$o-white-9: map-get($overlay-white-map, 9 ); */
+
+/* 3.1 White Overlay Custom props */
+:root {
+  @each $num, $val in $overlay-white-map {
+    --o-white-#{$num}:#{$val};
+  }
+}
+
+/* 4 Highlight Color */
+$h-clr:hsl($adjust-h-clr, 100%, 50%);
+
+/* 4.1 Highlight Color adjust function for map */
+@function h-cr ($color, $adjust ){
+  @return color.adjust($color, $lightness: $adjust)
+};
+
+/* 4.2 Highlight Color Map */
+$h-clr-map:(
+h-clr-1: h-cr($h-clr,0% ),
+h-clr-2: h-cr($h-clr,-5% ),
+h-clr-3: h-cr($h-clr,-10% ),
+h-clr-4: h-cr($h-clr,-15% ),
+h-clr-5: h-cr($h-clr,-20% ),
+h-clr-6: h-cr($h-clr,-25% ),
+h-clr-7: h-cr($h-clr,-30% ),
+h-clr-8: h-cr($h-clr,-40% ),
+h-clr-9: h-cr($h-clr,-45%),
+);
+
+/* 4.3 Highlight Color Cutom Props */
+.theme-1 {
+  @each $clr, $val in $h-clr-map {
+    --#{$clr}: #{$val};
+  }
+}
+
+/* 4.4 Highlight Color alpha adjustment for overlay  */
+@function hClrOpacity ($color, $opacity){
+  @return color.adjust($color, $alpha: $opacity)
+};
+
+/* 4.5 Highlight Color Overlay Map */
+$h-overlay-map:(
+  h-overlay-1:hClrOpacity($h-clr,-0.1),
+  h-overlay-2:hClrOpacity($h-clr,-0.2),
+  h-overlay-3:hClrOpacity($h-clr,-0.3),
+  h-overlay-4:hClrOpacity($h-clr,-0.4),
+  h-overlay-5:hClrOpacity($h-clr,-0.5),
+  h-overlay-6:hClrOpacity($h-clr,-0.6),
+  h-overlay-7:hClrOpacity($h-clr,-0.7),
+  h-overlay-8:hClrOpacity($h-clr,-0.8),
+  h-overlay-9:hClrOpacity($h-clr,-0.9),
+);
+
+/* 4.6 Highlight Color Overlay Custom Properties */
+.theme-1 {
+  @each $clr, $val in $h-overlay-map {
+    --#{$clr}: #{$val};
+  }
+}
+
+
+@function getHue ($clr, $amount) {
+  @return color.hue($clr) - $amount
+};
+
+
+
+/* 5 Secondary Color */
+$s-clr:hsl(getHue($h-clr, $adjust), 100%, 50%);
+
+
+
+/* 5.1 Secondary Color adjust function for map */
+@function h-cr ($color, $adjust ){
+  @return color.adjust($color, $lightness: $adjust)
+};
+
+/* 5.2 Secondary Color Map */
+$s-clr-map:(
+h-clr-1: h-cr($s-clr,0% ),
+h-clr-2: h-cr($s-clr,-5% ),
+h-clr-3: h-cr($s-clr,-10% ),
+h-clr-4: h-cr($s-clr,-15% ),
+h-clr-5: h-cr($s-clr,-20% ),
+h-clr-6: h-cr($s-clr,-25% ),
+h-clr-7: h-cr($s-clr,-30% ),
+h-clr-8: h-cr($s-clr,-40% ),
+h-clr-9: h-cr($s-clr,-45%),
+);
+
+/* 5.3 Secondary Color Cutom Props */
+.theme-2 {
+  @each $clr, $val in $s-clr-map {
+    --#{$clr}: #{$val};
+  }
+}
+
+/* 5.4 Secondary Color alpha adjustment for overlay  */
+@function sClrOpacity ($color, $opacity){
+  @return color.adjust($color, $alpha: $opacity)
+};
+
+/* 5.5 Secondary Color Overlay Map */
+$s-overlay-map:(
+  h-overlay-1:sClrOpacity($s-clr,-0.1),
+  h-overlay-2:sClrOpacity($s-clr,-0.2),
+  h-overlay-3:sClrOpacity($s-clr,-0.3),
+  h-overlay-4:sClrOpacity($s-clr,-0.4),
+  h-overlay-5:sClrOpacity($s-clr,-0.5),
+  h-overlay-6:sClrOpacity($s-clr,-0.6),
+  h-overlay-7:sClrOpacity($s-clr,-0.7),
+  h-overlay-8:sClrOpacity($s-clr,-0.8),
+  h-overlay-9:sClrOpacity($s-clr,-0.9),
+);
+
+/* 5.6 Secondary Color Overlay Custom Properties */
+.theme-2 {
+  @each $clr, $val in $s-overlay-map {
+    --#{$clr}: #{$val};
+  }
+}
+
+/* 6 Opposite Colors Cutsom Props */
+.theme-1 {
+  @each $clr, $val in $s-clr-map {
+    --op-#{$clr}: #{$val};
+  }
+  @each $clr, $val in $s-overlay-map {
+    --op-#{$clr}: #{$val};
+  }
+}
+
+.theme-2 {
+  @each $clr, $val in $h-clr-map {
+    --op-#{$clr}: #{$val};
+  }
+  @each $clr, $val in $h-overlay-map {
+    --op-#{$clr}: #{$val};
+  }
+}
+
+
+.dark-theme-1 {
+  @each $clr, $val in $gray-clr-map {
+    --dark-#{$clr}: #{$val};
+  }
+  --overlay: rgba(255,255,255,0.5);
+}
+
+.dark-theme-2 {
+  @each $clr, $val in $gray-clr-map-rev {
+    --dark-#{$clr}: #{$val};
+  }
+  --overlay: rgba(0,0,0,0.5);
+}

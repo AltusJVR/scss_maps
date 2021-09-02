@@ -1,10 +1,13 @@
+/* Typography and reset */
 @use 'base/typography';
 @use 'base/reset';
 
+/* Components */
 @use 'components/navbar';
 @use 'layout/container';
 @use 'components/buttons';
 
+/* Pages */
 @use 'pages/index';
 @use 'pages/dark';
 // @use 'pages/font';
